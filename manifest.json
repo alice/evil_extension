@@ -1,0 +1,31 @@
+{
+  "name": "Evil Extension",
+  "version": "1.0",
+  "minimum_chrome_version": "53",
+  "description": "Opens your privacy settings and changes them behind your back.",
+  "manifest_version": 2,
+  "permissions": ["tabs", "<all_urls>"],
+  "icons": {
+    "16": "icons/evil_16.png",
+    "24": "icons/evil_24.png",
+    "48": "icons/evil_48.png",
+    "128": "icons/evil_128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/evil_128.png"
+  },
+  "commands": {
+  "_execute_browser_action": {
+    "suggested_key": {
+      "default": "Ctrl+Shift+E"
+    }
+  }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "automation": {
+    "interact": true,
+    "desktop": true
+  }
+}
